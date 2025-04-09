@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 3.5s ease;
+  outline: none;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  z-index: -3;
+  transition: opacity 2s ease-in-out;
+}
+
+.conteiner {
+  width: 100%;
+  max-width: 500px;
+  padding: 110px 0 35px;
+  border-radius: 25px;
+  border: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+.titulo {
+  z-index: 3;
+  position: relative;
+  transform: translateY(-45px);
+  font-family: "Pirata One", system-ui;
+  font-weight: 400;
+  font-size: 20pt;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: white;
+}
+
+.DestaqueTitulo {
+  text-shadow: 4px 2px 4px black;
+}
+
+.box1 {
+  padding: 10px;
+  font-size: 30pt;
+  margin-bottom: px;
+  background: transparent;
+}
+
+input {
+  padding: 12px 0 12px;
+  padding-left: 10px;
+  width: 380px;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 30px;
+  font-family: "Pirata One", system-ui;
+  font-weight: 400;
+  font-size: 12pt;
+  color: white;
+}
+
+.box-text[type="text"]::placeholder,
+[type="password"]::placeholder {
+  color: white;
+}
+
+.botao1 {
+  z-index: 1;
+  position: relative;
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botao1:hover {
+  transform: translateY(-2px);
+}
+.form-botao {
+  padding: 12px;
+  width: 250px;
+  border-radius: 30px;
+  font-family: "Pirata One", system-ui;
+  font-weight: 400;
+  font-size: 25pt;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+}
+
+.mago {
+  z-index: 1;
+  position: relative;
+  transform: translateY(-202px);
+  right: -368px;
+  filter: drop-shadow(0px 0px 1px wheat);
+}
+.ie {
+  z-index: 1;
+  position: relative;
+  transform: translateY(-170px);
+  right: -370px;
+  filter: drop-shadow(0px 0px 1px wheat);
+}
+
+.link-cadastre-se {
+  font-family: "Pirata One", system-ui;
+  font-weight: 400;
+  text-decoration: none;
+  z-index: 2;
+  position: absolute;
+  transform: translateY(30px);
+  right: 50px;
+  font-size: 17pt;
+  color: white;
+}
+
+.link-cadastre-se:hover {
+  transform: translateY(28px);
+}
+
+.link-Esqueceu-sua-senha {
+  font-family: "Pirata One", system-ui;
+  font-weight: 400;
+  text-decoration: none;
+  z-index: 2;
+  position: absolute;
+  transform: translateY(30px);
+  right: 280px;
+  font-size: 17pt;
+  color: white;
+}
+
+.link-Esqueceu-sua-senha:hover {
+  transform: translateY(28px);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 2px solid white;
+  font-family: "Pirata One", system-ui;
+  font-weight: 400;
+  font-size: 12pt;
+  -webkit-text-fill-color: white !important;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+.link-cadastre-se:hover {
+  scale: 1.05;
+  cursor: pointer;
+}
