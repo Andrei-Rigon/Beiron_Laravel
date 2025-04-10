@@ -17,9 +17,8 @@ return new class extends Migration
             $table->string('LOGIN',255)->nullable();
             $table->string('EMAIL',255)->nullable();
             $table->string('SENHA',255)->nullable();
-            $table->timestamp('DATAHORACADASTRO')->nullable();
-            $table->string('ATIVO',3)->nullable();
-            $table->string('CODPERFIL');
+            $table->timestamp('DATAHORACADASTRO')->useCurrent();
+            $table->string('ATIVO',3)->default('SIM');
             $table->timestamps();
         });
     }

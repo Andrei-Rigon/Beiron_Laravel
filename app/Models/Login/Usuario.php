@@ -16,7 +16,6 @@ class Usuario extends Model
         'SENHA',
         'DATAHORACADASTRO',
         'ATIVO',
-        'CODPERFIL',
     ];
 }
 

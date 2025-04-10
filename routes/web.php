@@ -10,9 +10,10 @@ Route::get('/', function () {
 
 
 // Rota que busca o Login
-Route::get('login/', [LoginController::class,'index']);
+Route::get('login/', [LoginController::class,'index'])->name('login-login');
 
-// Rota que busca o cadastrar
-Route::get('Cadastrar/', [CadastrarController::class, 'index'])->name('cadastrar-index');
-
-
+Route::prefix('cadastrar')->group(function(){
+    Route::get('/', [CadastrarController::class, 'index'])->name('cadastrar-index');
+    Route::get('/create',[CadastrarController::class, 'create'])->name('cadastrar-create');
+    Route::post('/', [CadastrarController::class, 'store'])->name('cadastrar-store');
+});

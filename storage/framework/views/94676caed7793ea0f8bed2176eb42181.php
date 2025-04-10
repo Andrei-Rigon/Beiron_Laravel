@@ -17,8 +17,9 @@
     <form
       class="ComeCadastre-se__Ajustes"
       id="form"
-      action="Cadastrar.php"
-      method="post">
+      action="<?php echo e(route('cadastrar-store')); ?>"
+      method="post"> 
+      <?php echo csrf_field(); ?>
       <div class="ComeCadastre-se__Ajustes__Forma for">
         <div class="PosTitulo">
           <h2 class="BeleDescriçao fort">Seja bem-vindo(a),</h2>
@@ -33,7 +34,7 @@
             class="login place"
             type="text"
             id="Nome"
-            name="login"
+            name="LOGIN"
             required
             placeholder="Login"
             maxlength="35"
@@ -47,7 +48,7 @@
             class="Email place"
             type="email"
             id="email"
-            name="email"
+            name="EMAIL"
             required
             placeholder="E-mail"
             maxlength="50"
@@ -75,7 +76,7 @@
             class="Senha2 place"
             type="password"
             id="Confirme-a-senha"
-            name="senha"
+            name="SENHA"
             required
             placeholder="Confirme a senha"
             maxlength="25"
@@ -91,15 +92,15 @@
     <div class="img_forma">
       <img
         class="imagem"
-        src="assets/pergaminho 5.png"
+        src=" <?php echo e(asset('assets/pergaminho 5.png')); ?>"
         alt="img"
         type="imagem" />
     </div>
     <div class="iconemago">
-      <img src="assets/mago24px.png" alt="img" />
+      <img src=" <?php echo e(asset('assets/mago24px.png')); ?> " alt="img" />
     </div>
     <div class="iconelivro">
-      <img src="assets/livro-de-feiticos.png" alt="img" />
+      <img src=" <?php echo e(asset('assets/livro-de-feiticos.png')); ?> " alt="img" />
     </div>
     <div class="olhoAberto">
       <i class="bi bi-eye-fill" id="bt-senha" onclick="OlhoAberto()"></i>
