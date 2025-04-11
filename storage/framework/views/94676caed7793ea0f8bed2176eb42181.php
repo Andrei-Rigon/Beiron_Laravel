@@ -62,7 +62,7 @@
             class="Senha place"
             type="password"
             id="senha"
-            name="senha_primaria"
+            name="senha"
             required
             placeholder="Senha"
             maxlength="25"
@@ -85,7 +85,7 @@
         </div>
 
         <div class="PosBotao">
-          <button class="Botao" name="Cadastrar" itype="submit" id="bt-voltar">Cadastrar</button>
+          <button class="Botao" name="Cadastrar" type="submit" id="bt-voltar" onclick="return senhaValidate()">Cadastrar</button>
         </div>
       </div>
     </form>

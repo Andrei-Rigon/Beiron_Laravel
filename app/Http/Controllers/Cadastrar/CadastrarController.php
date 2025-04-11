@@ -18,19 +18,21 @@ class CadastrarController extends Controller
 
     public function store(Request $request) 
     {
-        // Primeiro Passo Segundo o GPT
-        if ($request->senha_primaria !== $request->SENHA){
-            return back()
-                ->withInput()
-                ->withErrors(['SENHA' => 'As senhas não se coincidem']);
-        }
+        $USUARIO = 'Teste';
+        $LOGIN = $request->input('LOGIN');
+        $EMAIL = $request->input('EMAIL');
+        $SENHA = $request->input('SENHA');
 
-        // Segundo passo pra validação segundo  GPT
-        Usuario::create([
-            'LOGIN' => $request->LOGIN,
-            'EMAIL' => $request->EMAIL,
-            'SENHA' => bcrypt($request->SENHA),
-        ]);
+        $request->validate(
+            [
+                'LOGIN' => 'required',
+                'SENHA' => 'required',        
+            ]
+            );
+        
+        
+
+
 
         // Codigo do Yt
         //Usuario::create($request->all());

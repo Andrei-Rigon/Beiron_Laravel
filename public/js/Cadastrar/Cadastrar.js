@@ -33,8 +33,8 @@ function OlhoAberto() {
   const login = document.getElementById('Nome');
   const spans = document.querySelectorAll('.span_required');
   const email = document.getElementById('email');
-  const senha = document.getElementById('senha');
-  const confirmaSenha = document.getElementById('Confirme-a-senha');
+  let senha = document.getElementById('senha');
+  let confirmaSenha = document.getElementById('Confirme-a-senha');
   
   function setError(element, index) {
     spans[index].style.display = 'block';
@@ -63,6 +63,7 @@ function OlhoAberto() {
     }
   }
   
+
   function senhaValidate() {
     if (senha.value.length < 6) {
       setError(senha, 2);
@@ -75,7 +76,18 @@ function OlhoAberto() {
     } else {
       removeError(confirmaSenha, 3);
     }
+    
+    if(senha.value !== confirmaSenha.value) {
+      confirmaSenha.reportValidity();
+      return false;
+      }
+      else{
+      confirmaSenha.setCustomValidity("");
+      return true;
+      }
+
   }
-  
+
+    confirmaSenha.addEventListener('input', senhaValidate);
   
   
