@@ -107,6 +107,7 @@ input {
   border: 2px solid white;
   background: transparent;
   color: white;
+  cursor: pointer;
 }
 
 .mago {
@@ -177,4 +178,4 @@ select:-webkit-autofill:focus {
 .link-cadastre-se:hover {
   scale: 1.05;
   cursor: pointer;
-}
+} 

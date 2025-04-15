@@ -33,8 +33,8 @@ function OlhoAberto() {
   const login = document.getElementById('Nome');
   const spans = document.querySelectorAll('.span_required');
   const email = document.getElementById('email');
-  let senha = document.getElementById('senha');
-  let confirmaSenha = document.getElementById('Confirme-a-senha');
+  const senha = document.getElementById('senha');
+  const confirmaSenha = document.getElementById('Confirme-a-senha');
   
   function setError(element, index) {
     spans[index].style.display = 'block';
@@ -63,31 +63,30 @@ function OlhoAberto() {
     }
   }
   
+ 
+  function senhaValidate(){ 
 
-  function senhaValidate() {
-    if (senha.value.length < 6) {
-      setError(senha, 2);
-    } else {
-      removeError(senha, 2);
-    }
-  
-    if (senha.value !== confirmaSenha.value) {
-      setError(confirmaSenha, 3);
-    } else {
-      removeError(confirmaSenha, 3);
-    }
+    const senhaValidate = senha.value.length >=6;
+    const senhaIguais = senha.value === confirmaSenha.value
     
-    if(senha.value !== confirmaSenha.value) {
-      confirmaSenha.reportValidity();
-      return false;
+    if(!senhaValidate){
+      setError(senha, 2);
+    }
+    else{
+    removeError(senha, 2);
+      }
+    
+      if(!senhaIguais){
+    setError(confirmaSenha, 3);
+    confirmaSenha.setCustomValidity("Senhas diferentes")
       }
       else{
-      confirmaSenha.setCustomValidity("");
-      return true;
+        removeError(confirmaSenha, 3);
+        confirmaSenha.setCustomValidity("");
       }
-
-  }
-
+    
+    
+      return senhaValidate && senhaIguais;
+    }
+    
     confirmaSenha.addEventListener('input', senhaValidate);
-  
-  

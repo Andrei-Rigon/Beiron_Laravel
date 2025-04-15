@@ -207,6 +207,7 @@ video:not(:empty) {
   font-size: 20pt;
   padding: 15px 38px;
   border-radius: 39px;
+  cursor: pointer;
 }
 
 .place::placeholder {
@@ -234,12 +235,14 @@ video:not(:empty) {
   position: absolute;
   right: 65px;
   transform: translateY(122px);
+  cursor: pointer;
 }
 
 .olhoFechado {
   position: absolute;
   right: 65px;
   transform: translateY(184px);
+  cursor: pointer;
 }
 
 .ERRO {
@@ -584,4 +587,4 @@ select:-webkit-autofill:focus {
 }
 .voltar-Login:hover {
   cursor: pointer;
-}
+} 

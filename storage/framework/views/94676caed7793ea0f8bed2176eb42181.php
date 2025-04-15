@@ -38,7 +38,8 @@
             required
             placeholder="Login"
             maxlength="35"
-            oninput="loginValidate()" />
+            oninput="loginValidate()"
+            value=<?php echo e(old("LOGIN")); ?> >
           <span class="span_required loginsp">Nome deve ter no mínimo 3 caracteres</span>
         </div>
 
@@ -62,7 +63,7 @@
             class="Senha place"
             type="password"
             id="senha"
-            name="senha"
+            name="SENHA"
             required
             placeholder="Senha"
             maxlength="25"
@@ -76,7 +77,7 @@
             class="Senha2 place"
             type="password"
             id="Confirme-a-senha"
-            name="SENHA"
+            name="ConfirmarSenha"
             required
             placeholder="Confirme a senha"
             maxlength="25"
@@ -87,6 +88,12 @@
         <div class="PosBotao">
           <button class="Botao" name="Cadastrar" type="submit" id="bt-voltar" onclick="return senhaValidate()">Cadastrar</button>
         </div>
+        <?php if(session('loginError')): ?>
+                                <div class="alert alert-danger text-center">
+                                    <?php echo e(session('loginError')); ?>
+
+                                </div>
+                            <?php endif; ?>
       </div>
     </form>
     <div class="img_forma">
@@ -95,7 +102,7 @@
         src=" <?php echo e(asset('assets/pergaminho 5.png')); ?>"
         alt="img"
         type="imagem" />
-    </div>
+    </div> 
     <div class="iconemago">
       <img src=" <?php echo e(asset('assets/mago24px.png')); ?> " alt="img" />
     </div>
