@@ -10,4 +10,9 @@ class LoginController extends Controller
     public function index() {
         return view('Login/login');        
     }
+
+    public function store(Request $request) {
+        $Login = $request->input('LOGIN');
+    }
 }
+ 

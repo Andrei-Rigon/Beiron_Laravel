@@ -13,10 +13,9 @@ return new class extends Migration
     {
         Schema::create('usuarios', function (Blueprint $table) {
             $table->id();
-            $table->string('USUARIO',255)->nullable();
-            $table->string('LOGIN',255)->nullable();
-            $table->string('EMAIL',255)->nullable();
-            $table->string('SENHA',255)->nullable();
+            $table->string('LOGIN',255);
+            $table->string('EMAIL',255);
+            $table->string('SENHA',255);
             $table->timestamp('DATAHORACADASTRO')->useCurrent();
             $table->string('ATIVO',3)->default('SIM');
             $table->timestamps();

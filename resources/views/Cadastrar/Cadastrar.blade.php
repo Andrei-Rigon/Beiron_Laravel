@@ -10,6 +10,9 @@
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 
 <body onload="fadeIn()">
@@ -54,7 +57,7 @@
             placeholder="E-mail"
             maxlength="50"
             oninput="emailValidate()"             
-            value={{ old("EMAIL") }} >>
+            value={{ old("EMAIL") }} >
           <span class="span_required emailsp">Coloque um e-mail válido</span>
         </div>
 
@@ -89,11 +92,30 @@
         <div class="PosBotao">
           <button class="Botao" name="Cadastrar" type="submit" id="bt-voltar" onclick="return senhaValidate()">Cadastrar</button>
         </div>
-        @if(session('loginError'))
-                                <div class="alert alert-danger text-center">
-                                    {{ session('loginError') }}
-                                </div>
-                            @endif
+        @if (session('loginError'))
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="loginErrorToast" class="toast align-items-center text-white bg-danger border-0" 
+             role="alert" 
+             aria-live="assertive" 
+             aria-atomic="true"
+             data-bs-delay="3000" 
+             data-bs-autohide="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    {{ session('loginError') }} 
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const toastEl = document.getElementById('loginErrorToast');
+        const toast = new bootstrap.Toast(toastEl);
+        toast.show();
+    </script>
+@endif
+
       </div>
     </form>
     <div class="img_forma">

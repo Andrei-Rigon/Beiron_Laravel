@@ -14,7 +14,7 @@
 
 <body onload="fadeIn()">
   <div class="conteiner">
-    <form class="form">
+    <form class="form" action="<?php echo e(route('login-store')); ?>" method="POST"><?php echo csrf_field(); ?>
       <div class="titulo">
         <strong class="DestaqueTitulo">
           <h1>
@@ -23,10 +23,10 @@
         </strong>
       </div>
       <div class="box1">
-        <input class="box-text" type="text" name="login" id="nome" required placeholder="Usuário" maxlength="25"><br>
+        <input class="box-text" type="text" name="LOGIN" id="nome" required placeholder="Usuário" maxlength="25"><br>
         <input class="box-text" type="password" name="senha" id="senha1" required placeholder="Senha" maxlength="25">
       </div>
-
+ 
       <div class="botao1">
         <button class="form-botao" id="bt-voltar" type="submit" name="Entrar">Entrar</button>
       </div>
