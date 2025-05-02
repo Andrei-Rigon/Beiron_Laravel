@@ -52,7 +52,7 @@ class CadastrarController extends Controller
         else {
             // Faz o Insert e vai pro Login/login.blade
             Usuario::create($data);
-            return redirect()->route('login-login');
+            return redirect()->route('login-index');
         }
 
     }

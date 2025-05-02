@@ -62,9 +62,9 @@ body {
 
 .box1 {
   padding: 10px;
-  font-size: 30pt;
   margin-bottom: px;
   background: transparent;
+  font-family: "Pirata One", system-ui;
 }
 
 input {

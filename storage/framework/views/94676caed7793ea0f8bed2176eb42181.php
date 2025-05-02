@@ -98,7 +98,7 @@
              role="alert" 
              aria-live="assertive" 
              aria-atomic="true"
-             data-bs-delay="3000" 
+             data-bs-delay="3000"  
              data-bs-autohide="true">
             <div class="d-flex">
                 <div class="toast-body">
