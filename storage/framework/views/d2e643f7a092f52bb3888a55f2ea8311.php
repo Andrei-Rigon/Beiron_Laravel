@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="Imagens/1-ebf92cfd.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo e(asset('ico/1-ebf92cfd.ico')); ?>" type="image/x-icon">
     <title>Recuperando a Senha</title>
-    <link rel="stylesheet" href="Recriar_senha.css">
+    <link rel="stylesheet" href="<?php echo e(asset('css/email/Recriar_senha.css')); ?>">
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
@@ -14,7 +14,7 @@
 
 <body onload="fadeIn()">
     <div class="conteiner">
-        <form action="Recriar_senha.php" method="POST">
+        <form action="<?php echo e(route('recuperar-index')); ?>" method="POST">
             <div class="text">
                 <h2 class="recu">Recuperar a senha</h2><br><br><br>
                 <input type="password" name="nova_senha" id="nova_senh" required
@@ -37,8 +37,8 @@
             </div>
         </form>
     </div>
-    <img class="img-backgrund" src="./assets/paisagem-magenta-da-fantasia-da-natureza.jpg" alt="img">
-    <script src="Recriar_senha.js"></script>
-</body>
+    <img class="img-backgrund" src="<?php echo e(asset('assets/paisagem-magenta-da-fantasia-da-natureza.jpg')); ?>" alt="img">
+    <script src="<?php echo e(asset('js/email/Recriar_senha.js')); ?>"></script>
+</body> 
 
 </html><?php /**PATH C:\xampp\htdocs\Beiron_Laravel\resources\views/Email/RecuperarSenha.blade.php ENDPATH**/ ?>

@@ -1,23 +1,20 @@
 <?php
 
-namespace App\Models\Login;
+namespace App\Models\Email;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Usuario extends Model
+class ResetPassword extends Model
 {
+    //
     use HasFactory;
 
     protected $fillable = [
-        'USUARIO',
         'LOGIN',
         'EMAIL',
-        'SENHA',
-        'DATAHORACADASTRO',
-        'ATIVO',
-        'NIVEL',
-        'XP',
+        'TOKENCONSULTATION',
+        'DATEREQUEST',
+        'EXPIRADO',
     ];
 }
-

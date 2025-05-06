@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Email\RecuperarSenhaController;
 use App\Http\Controllers\Cadastrar\CadastrarController;
 use App\Http\Controllers\Email\EmailController;
 use App\Http\Controllers\Login\LoginController;
@@ -27,5 +28,7 @@ Route::prefix('cadastrar')->group(function(){
 Route::prefix('email')->group(function(){
     Route::get('/', [EmailController::class, 'index'])->name('email-index');
     Route::post('/', [EmailController::class, 'store'])->name('email-store');
-    Route::get('/RecuperarSenha', [EmailController::class, 'Recuperar'])->name('email-recuperar');
+    // Below is recover password
+    Route::get('/RecuperarSenha', [RecuperarSenhaController::class, 'index'])->name('recuperar-index');
+    Route::post('/RecuperarSenha', [RecuperarSenhaController::class, 'store'])->name('recuperar-store');
 });

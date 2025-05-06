@@ -8,7 +8,6 @@ class sendService
 {
     public function EnviarEmail($LOGIN, $EMAIL){
         // Fazer o Envio de Email por aqui.
-        echo "Login: $LOGIN, EMAIL: $EMAIL";
 
 
 if (isset($_POST['send'])) {

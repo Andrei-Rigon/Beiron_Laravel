@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('SENHA',255);
             $table->timestamp('DATAHORACADASTRO')->useCurrent();
             $table->string('ATIVO',3)->default('SIM');
+            $table->double('NIVEL');
+            $table->double('XP');
             $table->timestamps();
         });
     }
